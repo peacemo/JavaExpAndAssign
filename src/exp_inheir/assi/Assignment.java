@@ -36,11 +36,13 @@ public class Assignment {
             return true;
         }
     }
+
 }
 
+//几何图形父类
 abstract class GeometricObject{
-    protected String color;
-    protected String shape;
+    protected String color;//用来表示颜色的字符串
+    protected String shape;//用来表示形状的字符串
 
     //getters&setters
     public String getColor() {
@@ -97,12 +99,12 @@ class Circle extends GeometricObject{
     @Override
     public double findArea() {
         return Math.PI * radius *radius;
-    }
+    }//将父类中的抽象方法重载，用于计算圆的面积
 
     @Override
     public double findPerimeter() {
         return Math.PI * 2.0 * radius;
-    }
+    }//将父类中的抽象方法重载，用于计算圆的周长
 }
 
 class Rectangle extends GeometricObject{
